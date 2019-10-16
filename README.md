@@ -34,3 +34,5 @@ detects and shows objects like cars and peoples on video
     ```bash
     $ python video_detection.py
     ```
+
+Your video will be in `output.avi`
