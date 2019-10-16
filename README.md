@@ -19,13 +19,15 @@ detects and shows objects like cars and peoples on video
 
 1. Download yolo.h5 to project directory from [here](https://github.com/OlafenwaMoses/ImageAI/releases/tag/1.0/)
 1. Put video file in project directory
-2. Edit `video_detection.py` and set input and output video files in:
+2. Edit `video_detection.py` and set input video file name in:
     ```python
-    video_path = detector.detectObjectsFromVideo(
+    detector.detectObjectsFromVideo(
         input_file_path=os.path.join(execution_path, "piter2.mp4"),
-        output_file_path=os.path.join(execution_path, "piter2_detected_1"),
+        save_detected_video=False,
         frames_per_second=29.97,
-        log_progress=True
+        log_progress=True,
+        per_frame_function=forFrame,
+        return_detected_frame=True
     )
     ```
 3. Run
