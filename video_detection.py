@@ -19,14 +19,12 @@ detector.setModelTypeAsYOLOv3()
 detector.setModelPath(os.path.join(execution_path, "yolo.h5"))
 detector.loadModel()
 
-video_path = detector.detectObjectsFromVideo(
+detector.detectObjectsFromVideo(
     input_file_path=os.path.join(execution_path, "piter2.mp4"),
     save_detected_video=False,
-    # output_file_path=os.path.join(execution_path, "piter2_detected_1"),
     frames_per_second=29.97,
     log_progress=True,
     per_frame_function=forFrame,
     return_detected_frame=True
 )
 out.release()
-print(video_path)
